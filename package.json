@@ -1,0 +1,60 @@
+{
+  "name": "pantry-cloud",
+  "description": "NodeJS package for Pantry",
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": "Róbert Darida",
+  "keywords": [
+    "pantry",
+    "npm",
+    "package"
+  ],
+  "funding": [
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/rdarida"
+    }
+  ],
+  "homepage": "https://rdarida.github.io/pantry-cloud",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rdarida/pantry-cloud.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rdarida/pantry-cloud/issues"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "bin": {
+    "pantry": "dist/cli.js"
+  },
+  "scripts": {
+    "clean": "rimraf coverage dist docs",
+    "pretest": "rimraf coverage",
+    "test": "jest",
+    "prebuild": "rimraf dist",
+    "build": "tsc",
+    "prestart": "npm run build",
+    "start": "node dist/cli.js",
+    "predocs": "rimraf docs",
+    "docs": "typedoc",
+    "release": "standard-version",
+    "postrelease": "git push --follow-tags origin main",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^26.0.22",
+    "@types/node": "^14.14.41",
+    "jest": "^26.6.3",
+    "jest-config": "^26.6.3",
+    "rimraf": "^3.0.2",
+    "standard-version": "^9.2.0",
+    "ts-jest": "^26.5.5",
+    "typedoc": "^0.20.35",
+    "typescript": "^4.2.4"
+  }
+}
