@@ -23,6 +23,7 @@
 <hr>
 
 ## Install
+You can get pantry-cloud via [npm](https://www.npmjs.com/package/pantry-cloud).
 ```
 npm i -S pantry-cloud
 ```
@@ -33,6 +34,9 @@ import { Pantry } from 'pantry-cloud';
 
 const pantry = new Pantry('<PANTRY_ID>');
 ```
+
+## API
+TBD
 
 ## Resources
 - [Pantry Documentation](https://documenter.getpostman.com/view/3281832/SzmZeMLC)
