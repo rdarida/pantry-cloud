@@ -39,4 +39,5 @@ const pantry = new Pantry('<PANTRY_ID>');
 TBD
 
 ## Resources
-- [Pantry Documentation](https://documenter.getpostman.com/view/3281832/SzmZeMLC)
+- [Pantry's Documentation](https://documenter.getpostman.com/view/3281832/SzmZeMLC)
+- [Pantry's Source Code](https://github.com/imRohan/Pantry)
