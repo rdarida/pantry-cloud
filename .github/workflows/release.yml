@@ -1,0 +1,46 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - CHANGELOG.md
+
+jobs:
+  release:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Setup NodeJS
+        uses: actions/setup-node@v1
+
+      - name: Install project dependencies
+        run: npm ci
+
+      - name: Run test
+        run: npm test -- --collectCoverage
+
+      - name: Generate documentation
+        run: npm run docs
+
+      - name: Copy coverage into docs
+        run: mv coverage/lcov-report docs/coverage
+
+      - name: Deploy documentation to GitHub Pages
+        uses: rdarida/simple-github-pages-deploy-action@v1
+        with:
+          git-user: 'rdarida'
+          git-email: 'rdarida@users.noreply.github.com'
+          git-base-folder: 'docs'
+          commit-message: 'chore: automatic deploy'
+
+      - name: Publish project
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
+          
