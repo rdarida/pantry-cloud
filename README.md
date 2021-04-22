@@ -2,17 +2,17 @@
 <p align="center">
   NodeJS package for <a href="https://getpantry.cloud" target="_blank">Pantry</a>
 </p>
-<p align="center">
-  <a href="https://github.com/rdarida/pantry-cloud/actions/workflows/release.yml" target="_blank" alt="GitHub Actions">
-    <img src="https://github.com/rdarida/pantry-cloud/actions/workflows/release.yml/badge.svg" alt="Release">
-  </a>
-  
+<p align="center">  
   <a href="https://sonarcloud.io/dashboard?id=rdarida_pantry-cloud" target="_blank" alt="SonarCloud">
-    <img src="https://sonarcloud.io/api/project_badges/measure?project=rdarida_pantry-cloud&metric=alert_status" alt="alert status">
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=rdarida_pantry-cloud&metric=alert_status" alt="quality gate">
   </a>
 
   <a href="https://sonarcloud.io/dashboard?id=rdarida_pantry-cloud" target="_blank" alt="SonarCloud">
     <img src="https://sonarcloud.io/api/project_badges/measure?project=rdarida_pantry-cloud&metric=coverage" alt="coverage">
+  </a>
+
+  <a href="https://github.com/rdarida/pantry-cloud/actions/workflows/release.yml" target="_blank" alt="GitHub Actions">
+    <img src="https://github.com/rdarida/pantry-cloud/actions/workflows/release.yml/badge.svg" alt="Release">
   </a>
 </p>
 <hr>
@@ -26,8 +26,8 @@ npm i -S pantry-cloud
 ```ts
 import { Pantry } from 'pantry-cloud';
 
-const pantry = new Pantry('<ID>');
+const pantry = new Pantry('<PANTRY_ID>');
 ```
 
 ## Resources
-- [Documentation](https://documenter.getpostman.com/view/3281832/SzmZeMLC)
+- [Pantry Documentation](https://documenter.getpostman.com/view/3281832/SzmZeMLC)
