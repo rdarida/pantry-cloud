@@ -18,6 +18,9 @@ jobs:
 
       - name: Setup NodeJS
         uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+          registry-url: https://registry.npmjs.org
 
       - name: Install project dependencies
         run: npm ci
