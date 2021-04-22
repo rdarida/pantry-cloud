@@ -15,6 +15,8 @@
     <img src="https://github.com/rdarida/pantry-cloud/actions/workflows/release.yml/badge.svg" alt="Release">
   </a>
 
+  <br>
+
   <img src="https://david-dm.org/rdarida/pantry-cloud/status.svg" alt="dependencies">
   <img src="https://david-dm.org/rdarida/pantry-cloud/dev-status.svg" alt="devDependencies">
 </p>
