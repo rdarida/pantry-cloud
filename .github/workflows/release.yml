@@ -27,6 +27,8 @@ jobs:
 
       - name: Run test
         run: npm test -- --collectCoverage
+        env:
+          PANTRY_ID: ${{ secrets.PANTRY_ID }}
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master

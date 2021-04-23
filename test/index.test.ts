@@ -1,7 +1,7 @@
-import log from '../src';
+import { Pantry } from '../src';
 
 describe('Test index', () => {
-  test('log should be truthy', () => {
-    expect(log).toBeTruthy();
+  test('Pantry should be truthy', () => {
+    expect(Pantry).toBeTruthy();
   });
 });

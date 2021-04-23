@@ -1,11 +1,23 @@
 #!/usr/bin/env node
 
-import log from '.';
+import dotenv from 'dotenv';
+import yargs from 'yargs/yargs';
+import { Pantry } from '.';
 
-((argv: string[]) => {
+dotenv.config();
+
+((argv) => {
   try {
-    log(...argv);
+    new Pantry(argv.id);
   } catch (error) {
     console.log(error);
   }
-})(process.argv.slice(2));
+})(
+  yargs(process.argv.slice(2))
+    .option('id', {
+      alias: 'i',
+      type: 'string',
+      default: process.env.PANTRY_ID || ''
+    })
+    .help().argv
+);
