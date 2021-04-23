@@ -21,9 +21,12 @@ describe('Test Pantry', () => {
     expect(status.dataStore).not.toBeUndefined();
   });
 
-  test('should create a new PantryID', async() => {
+  test('should create a new PantryID', async () => {
     const name = 'TestPantry';
-    id = await pantry.create({ name, contactEmail: `${name.toLowerCase()}@eemmaaiill.com` });
+    id = await pantry.create({
+      name,
+      contactEmail: `${name.toLowerCase()}@eemmaaiill.com`
+    });
     console.log(id);
     expect(id).not.toBeUndefined();
     expect(id.length).toBeGreaterThan(1);

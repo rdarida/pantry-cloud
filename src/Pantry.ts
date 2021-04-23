@@ -14,12 +14,20 @@ export class Pantry {
     return Pantry.fetch([Pantry.BASE_URL, 'system', 'status'].join('/'), 'GET');
   }
 
-  public async create(data: { name: string;  contactEmail: string; description?: string; }): Promise<string> {
+  public async create(data: {
+    name: string;
+    contactEmail: string;
+    description?: string;
+  }): Promise<string> {
     if (!data.description) {
       data.description = 'defaultDescription';
     }
 
-    return Pantry.fetch([Pantry.BASE_URL, 'pantry', 'create'].join('/'), 'POST', data);
+    return Pantry.fetch(
+      [Pantry.BASE_URL, 'pantry', 'create'].join('/'),
+      'POST',
+      data
+    );
   }
 
   public async getPantry(): Promise<Details> {
@@ -31,22 +39,33 @@ export class Pantry {
   }
 
   public async deletePantry(id?: string): Promise<any> {
-    return Pantry.fetch([Pantry.BASE_URL, 'pantry', id ? id : this.id].join('/'), 'DELETE');
+    return Pantry.fetch(
+      [Pantry.BASE_URL, 'pantry', id ? id : this.id].join('/'),
+      'DELETE'
+    );
   }
 
   private async fetchPantry(method: Method, data?: any): Promise<Details> {
-    return Pantry.fetch([Pantry.BASE_URL, 'pantry', this.id].join('/'), method, data);
+    return Pantry.fetch(
+      [Pantry.BASE_URL, 'pantry', this.id].join('/'),
+      method,
+      data
+    );
   }
 
-  private static async fetch(url: string, method: Method, data = {}): Promise<any> {
+  private static async fetch(
+    url: string,
+    method: Method,
+    data = {}
+  ): Promise<any> {
     const headers = {
       'Content-Type': 'application/json'
     };
 
     return new Promise<any>((resolve, reject) => {
       axios({ url, method, headers, data: JSON.stringify(data) })
-        .then(response => resolve(response.data))
-        .catch(reason => reject(reason));
+        .then((response) => resolve(response.data))
+        .catch((reason) => reject(reason));
     });
   }
 }
