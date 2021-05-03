@@ -51,7 +51,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "dotenv": "^8.2.0",
-    "yargs": "^16.2.0"
+    "yargs": "^17.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.1.1",
