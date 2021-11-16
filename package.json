@@ -38,7 +38,7 @@
     "lint": "eslint ./{src,test}/**/*.ts",
     "pretest": "rimraf coverage",
     "test": "jest",
-    "prebuild": "rimraf dist",
+    "prebuild": "npm run clean",
     "build": "tsc",
     "prestart": "npm run build",
     "start": "node dist/cli.js",
@@ -46,7 +46,7 @@
     "docs": "typedoc",
     "release": "standard-version",
     "postrelease": "git push --follow-tags origin main",
-    "prepublishOnly": "npm run clean && npm run build"
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "axios": "^0.24.0",
@@ -59,8 +59,8 @@
     "@types/jest": "^27.0.2",
     "@types/node": "^16.11.7",
     "@types/yargs": "^17.0.5",
-    "@typescript-eslint/eslint-plugin": "^4.22.0",
-    "@typescript-eslint/parser": "^4.22.0",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
     "eslint": "^8.2.0",
     "husky": "^7.0.4",
     "is-ci": "^3.0.0",
