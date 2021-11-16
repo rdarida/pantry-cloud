@@ -17,13 +17,21 @@
   </a>
 
   <br>
+
+  <a href="https://github.com/rdarida/patry-cloud" target="_blank">
+    <img src="https://img.shields.io/badge/-repository-222222?style=flat&logo=github" />
+  </a>
+
+  <a href="https://www.patreon.com/rdarida" target="_blank">
+    <img src="https://img.shields.io/badge/-patreon-222222?style=flat&logo=patreon" />
+  </a>
 </p>
 <hr>
 
 ## Install
-You can get pantry-cloud via [npm](https://www.npmjs.com/package/pantry-cloud).
+You can get **`pantry-cloud`** via [npm](https://www.npmjs.com/package/pantry-cloud).
 ```
-npm i -S pantry-cloud
+npm install pantry-cloud
 ```
 
 ## Usage
@@ -36,6 +44,19 @@ const pantry = new Pantry('<PANTRY_ID>');
 ## API
 TBD
 
-## Resources
-- [Pantry's Documentation](https://documenter.getpostman.com/view/3281832/SzmZeMLC)
-- [Pantry's Source Code](https://github.com/imRohan/Pantry)
+<hr>
+<details>
+  <summary>
+    <strong>Resources</strong>
+  </summary>
+
+  - [Pantry's Documentation](https://documenter.getpostman.com/view/3281832/SzmZeMLC)
+  - [Pantry's Source Code](https://github.com/imRohan/Pantry)
+</details>
+<hr>
+
+<p align="center">
+  <a href="LICENSE" target="_blank">
+    <img src="https://img.shields.io/badge/license-MIT-green" />
+  </a>
+</p>
