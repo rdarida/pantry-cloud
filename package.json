@@ -55,7 +55,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^12.1.1",
-    "@commitlint/config-conventional": "^12.1.1",
+    "@commitlint/config-conventional": "^14.1.0",
     "@types/jest": "^26.0.22",
     "@types/node": "^16.11.7",
     "@types/yargs": "^17.0.0",
