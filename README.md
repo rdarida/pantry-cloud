@@ -17,9 +17,6 @@
   </a>
 
   <br>
-
-  <img src="https://david-dm.org/rdarida/pantry-cloud/status.svg" alt="dependencies">
-  <img src="https://david-dm.org/rdarida/pantry-cloud/dev-status.svg" alt="devDependencies">
 </p>
 <hr>
 
