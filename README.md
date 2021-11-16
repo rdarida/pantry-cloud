@@ -1,3 +1,4 @@
+<img src="https://repository-images.githubusercontent.com/360660059/254c4f00-a3b8-11eb-951a-ee9b9f6e0bca">
 <h1 align="center">pantry-cloud</h1>
 <p align="center">
   NodeJS package for <a href="https://getpantry.cloud" target="_blank">Pantry</a>
