@@ -3,7 +3,11 @@
 <p align="center">
   NodeJS package for <a href="https://getpantry.cloud" target="_blank">Pantry</a>
 </p>
-<p align="center">  
+<p align="center">
+  <a href="https://github.com/rdarida/pantry-cloud/actions/workflows/release.yml" target="_blank" alt="GitHub Actions">
+    <img src="https://github.com/rdarida/pantry-cloud/actions/workflows/release.yml/badge.svg" alt="Release">
+  </a>
+
   <a href="https://sonarcloud.io/dashboard?id=rdarida_pantry-cloud" target="_blank" alt="SonarCloud">
     <img src="https://sonarcloud.io/api/project_badges/measure?project=rdarida_pantry-cloud&metric=alert_status" alt="quality gate">
   </a>
@@ -12,11 +16,17 @@
     <img src="https://sonarcloud.io/api/project_badges/measure?project=rdarida_pantry-cloud&metric=coverage" alt="coverage">
   </a>
 
-  <a href="https://github.com/rdarida/pantry-cloud/actions/workflows/release.yml" target="_blank" alt="GitHub Actions">
-    <img src="https://github.com/rdarida/pantry-cloud/actions/workflows/release.yml/badge.svg" alt="Release">
+  <img src="https://img.shields.io/librariesio/release/npm/pantry-cloud">
+
+  <a href="https://rdarida.github.io/pantry-cloud/coverage/" target="_blank">
+    <img src="https://img.shields.io/badge/lcov-report-grey" />
   </a>
 
   <br>
+
+  <a href="https://npmjs.org/package/pantry-cloud" target="_blank">
+    <img src="https://img.shields.io/npm/v/pantry-cloud" />
+  </a>
 
   <a href="https://github.com/rdarida/patry-cloud" target="_blank">
     <img src="https://img.shields.io/badge/-repository-222222?style=flat&logo=github" />
