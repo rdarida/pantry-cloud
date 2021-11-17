@@ -45,10 +45,14 @@ describe('Test Pantry', () => {
   });
 
   test('should return with the content of the test_basket', async () => {
-    const actual = await pantry.getBasket(basketName);
+    let actual = await pantry.getBasket(basketName);
     expect(actual).toBeTruthy();
 
-    // TODO: make test for non-existing basket
+    try {
+      actual = await pantry.getBasket('non-existing_basket');
+    } catch (error: any) {
+      expect(error.response.status).toEqual(400);
+    }
   });
 
   test('should delete the test_basket', async () => {
