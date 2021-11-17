@@ -52,7 +52,7 @@ const pantry = new Pantry('<PANTRY_ID>');
 ```
 
 ## API
-TBD
+See in the [documentation](https://rdarida.github.io/pantry-cloud).
 
 <hr>
 <details>
