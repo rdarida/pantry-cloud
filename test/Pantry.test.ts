@@ -1,56 +1,57 @@
-import dotenv from 'dotenv';
+import { config } from 'dotenv';
 import { Pantry } from '../src/Pantry';
 
+config();
+jest.setTimeout(60 * 1000);
+
 describe('Test Pantry', () => {
+  const basketName = 'test_baskte';
   let pantry: Pantry;
-  let id: string;
 
   beforeAll(() => {
-    dotenv.config();
-  });
-
-  beforeEach(() => {
     pantry = new Pantry(process.env.PANTRY_ID || '');
   });
 
-  test('should return with Status', async () => {
-    const status = await pantry.getStatus();
-    expect(status).not.toBeUndefined();
-    expect(status.website).not.toBeUndefined();
-    expect(status.api).not.toBeUndefined();
-    expect(status.dataStore).not.toBeUndefined();
+  test('should return with Pantry', async () => {
+    const actual = await pantry.getPantry();
+    expect(actual).toBeTruthy();
+    expect(actual.name).toEqual('Pantry Cloud Test');
   });
 
-  test('should create a new PantryID', async () => {
-    const name = 'TestPantry';
-    id = await pantry.create({
-      name,
-      contactEmail: `${name.toLowerCase()}@eemmaaiill.com`
-    });
-    console.log(id);
-    expect(id).not.toBeUndefined();
-    expect(id.length).toBeGreaterThan(1);
+  test('should create the test_basket', async () => {
+    const actual = await pantry.postBasket(basketName);
+    expect(actual).toBeTruthy();
+    expect(typeof actual).toEqual('string');
+    expect(actual.indexOf(basketName)).toBeGreaterThanOrEqual(0);
   });
 
-  xtest('should return with Pantry', async () => {
-    const p = await pantry.getPantry();
-    console.log(p);
+  test('should put test content into the test_bucket', async () => {
+    let actual = await pantry.putBasket(basketName, { content: 'test' });
+    expect(actual).toBeTruthy();
+    expect(actual.content).toEqual('test');
+
+    actual = await pantry.putBasket(basketName, { test: 'content' });
+    expect(actual).toBeTruthy();
+    expect(actual.content).toEqual('test');
+    expect(actual.test).toEqual('content');
+
+    actual = await pantry.putBasket(basketName, { content: 'content', test: 'test' });
+    expect(actual).toBeTruthy();
+    expect(actual.content).toEqual('content');
+    expect(actual.test).toEqual('test');
   });
 
-  xtest('should update Pantry', async () => {
-    const p = await pantry.putPantry({
-      name: 'TestPantryUpdated',
-      description: 'Updated description for TestPantryUpdated',
-      notifications: false
-    });
+  test('should return with the content of the test_basket', async () => {
+    const actual = await pantry.getBasket(basketName);
+    expect(actual).toBeTruthy();
 
-    expect(p).toBeTruthy();
-    expect(p.name).toEqual('TestPantryUpdated');
-    expect(p.description).toEqual('Updated description for TestPantryUpdated');
-    expect(p.notifications).toBeFalsy();
+    // TODO: make test for non-existing basket
   });
 
-  test('should delete Pantry', async () => {
-    console.log(await pantry.deletePantry(id));
+  test('should delete the test_basket', async () => {
+    const actual = await pantry.deleteBasket(basketName);
+    expect(actual).toBeTruthy();
+    expect(typeof actual).toEqual('string');
+    expect(actual.indexOf(basketName)).toEqual(0);
   });
 });
