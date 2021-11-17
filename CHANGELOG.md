@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.0](https://github.com/rdarida/pantry-cloud/compare/v0.0.12...v0.1.0) (2021-11-17)
+
+
+### Features
+
+* update consts in fetch.ts ([ea5747e](https://github.com/rdarida/pantry-cloud/commit/ea5747ebba8d2d7906ae992aa2815ee8b81b467a))
+
 ### [0.0.12](https://github.com/rdarida/pantry-cloud/compare/v0.0.11...v0.0.12) (2021-11-17)
 
 ### 0.0.11 (2021-11-16)
