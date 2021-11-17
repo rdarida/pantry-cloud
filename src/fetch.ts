@@ -3,11 +3,7 @@ import axios, { Method } from 'axios';
 const PANTRY_BASE_URL = 'https://getpantry.cloud';
 const PANTRY_VERSION = 'apiv1';
 
-export function fetch<T>(
-  url: string,
-  method: Method,
-  data = {}
-): Promise<T> {
+export function fetch<T>(url: string, method: Method, data = {}): Promise<T> {
   url = [PANTRY_BASE_URL, PANTRY_VERSION, 'pantry', url].join('/');
   const headers = { 'Content-Type': 'application/json' };
 

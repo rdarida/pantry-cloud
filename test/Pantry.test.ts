@@ -35,7 +35,10 @@ describe('Test Pantry', () => {
     expect(actual.content).toEqual('test');
     expect(actual.test).toEqual('content');
 
-    actual = await pantry.putBasket(basketName, { content: 'content', test: 'test' });
+    actual = await pantry.putBasket(basketName, {
+      content: 'content',
+      test: 'test'
+    });
     expect(actual).toBeTruthy();
     expect(actual.content).toEqual('content');
     expect(actual.test).toEqual('test');

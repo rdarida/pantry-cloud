@@ -61,11 +61,11 @@ export class Pantry {
     return this.fetchBasket(basketName, 'DELETE');
   }
 
-  private async fetchBasket<T>(basketName: string, method: Method, data = {}): Promise<T> {
-    return fetch(
-      [this.id, 'basket', basketName].join('/'),
-      method,
-      data
-    );
+  private async fetchBasket<T>(
+    basketName: string,
+    method: Method,
+    data = {}
+  ): Promise<T> {
+    return fetch([this.id, 'basket', basketName].join('/'), method, data);
   }
 }
