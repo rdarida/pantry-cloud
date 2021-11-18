@@ -58,7 +58,7 @@
     "@commitlint/config-conventional": "^15.0.0",
     "@types/jest": "^27.0.2",
     "@types/node": "^16.11.7",
-    "@types/yargs": "^16.0.4",
+    "@types/yargs": "^17.0.7",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
     "eslint": "^8.2.0",
