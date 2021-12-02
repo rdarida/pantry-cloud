@@ -49,6 +49,49 @@ npm install pantry-cloud
 import { Pantry } from 'pantry-cloud';
 
 const pantry = new Pantry('<PANTRY_ID>');
+
+const details = await pantry.getPantry();
+
+/*
+ * Logs:
+ * {
+ *   name: '...',
+ *   descriptions: '...',
+ *   errors: [...],
+ *   notifications: true,
+ *   percentFull: 0,
+ *   baskets: [...]
+ * }
+ */
+console.log(details);
+
+// The `postBasket` async method creates a new basket or replaces an existing one.
+await pantry.postBasket('testBasket');
+
+// Then `putBasket` async method updates the contents of a given basket. 
+const contentOfTestBasket = await pantry.putBasket('testBasket', { content: 'test' });
+
+/*
+ * Logs:
+ * {
+ *   content: 'test'
+ * }
+ */
+console.log(contentOfTestBasket);
+
+// The `getBasket` async method returns with the contents of the given basket.
+const testBasket = await pantry.getBasket('testBasket');
+
+/*
+ * Logs:
+ * {
+ *   content: 'test'
+ * }
+ */
+console.log(testBasket);
+
+// The `deleteBasket` async method deletes the entire baskte.
+await pantry.deleteBasket('testBasket');
 ```
 
 ## API

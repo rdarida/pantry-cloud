@@ -43,7 +43,7 @@ export class Pantry {
   }
 
   /**
-   * Returns with the content of the given basket.
+   * Returns with the contents of the given basket.
    * @param {string} basketName The name of the basket
    * @return {any} The full contents of the basket
    */
@@ -52,7 +52,7 @@ export class Pantry {
   }
 
   /**
-   * Delete the entire basket.
+   * Deletes the entire basket.
    * <b>Warning, this action cannot be undone.</b>
    * @param {string} basketName The name of the basket
    * @return {string} Notification about the deletion
