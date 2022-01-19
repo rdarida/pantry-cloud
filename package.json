@@ -49,7 +49,7 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "axios": "^0.24.0",
+    "axios": "^0.25.0",
     "dotenv": "^14.2.0",
     "yargs": "^16.2.0"
   },
