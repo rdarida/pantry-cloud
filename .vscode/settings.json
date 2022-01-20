@@ -14,5 +14,9 @@
     "**/dist": true,
     "**/docs": true,
     "**/node_modules": true
+  },
+  "search.exclude": {
+    "**/package-lock.json": true,
+    "**/yarn.lock": true
   }
 }
