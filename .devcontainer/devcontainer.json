@@ -20,7 +20,8 @@
       "alefragnani.bookmarks",
       "editorconfig.editorconfig",
       "esbenp.prettier-vscode",
-      "dbaeumer.vscode-eslint"
+      "dbaeumer.vscode-eslint",
+      "ritwickdey.liveserver"
     ],
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
     "forwardPorts": [],
