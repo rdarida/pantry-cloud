@@ -1,0 +1,17 @@
+name: Dependabot PR
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  dependabot-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: fregante/setup-git-user@v1
+      - run: npm install
+      - run: npm run build
+      - run: npm run release

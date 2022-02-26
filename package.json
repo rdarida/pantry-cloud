@@ -34,7 +34,8 @@
   "scripts": {
     "prepare": "is-ci || husky install",
     "clean": "rimraf coverage dist docs",
-    "format": "prettier --write \"**/{src,test}/*.{ts,json}\"",
+    "format": "lint-staged",
+    "xformat": "prettier --write \"**/{src,test}/*.{ts,json}\"",
     "lint": "eslint ./{src,test}/**/*.ts",
     "pretest": "rimraf coverage",
     "test": "jest",
@@ -66,11 +67,17 @@
     "is-ci": "^3.0.1",
     "jest": "^27.4.5",
     "jest-config": "^27.4.5",
+    "lint-staged": "^12.3.4",
     "prettier": "^2.5.1",
     "rimraf": "^3.0.2",
     "standard-version": "^9.3.2",
     "ts-jest": "^27.1.2",
     "typedoc": "^0.22.10",
     "typescript": "^4.5.4"
+  },
+  "lint-staged": {
+    "**/{src,test}/*.{ts,json}": [
+      "prettier --write"
+    ]
   }
 }
