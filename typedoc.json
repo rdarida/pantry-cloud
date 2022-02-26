@@ -1,5 +1,0 @@
-{
-  "entryPoints": ["src"],
-  "excludePrivate": true,
-  "out": "docs"
-}
