@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.8](https://github.com/rdarida/pantry-cloud/compare/v0.1.7...v0.1.8) (2022-02-26)
+
+
+### Features
+
+* set up lint-staged ([5a537fa](https://github.com/rdarida/pantry-cloud/commit/5a537fa7a0b6e0e6e96a7781d477ef7f45b6b746))
+* update postrelease script ([7923c6e](https://github.com/rdarida/pantry-cloud/commit/7923c6e0447e2f33ae5823f71169caddcec78a28))
+
 ### 0.1.7 (2022-01-20)
 
 ### [0.1.6](https://github.com/rdarida/pantry-cloud/compare/v0.1.5...v0.1.6) (2021-12-30)
