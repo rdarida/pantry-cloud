@@ -47,7 +47,8 @@
     "docs": "typedoc",
     "release": "standard-version",
     "postrelease": "git push --follow-tags origin HEAD",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "echo": "echo test"
   },
   "dependencies": {
     "axios": "^0.25.0",
