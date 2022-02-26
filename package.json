@@ -46,7 +46,7 @@
     "predocs": "rimraf docs",
     "docs": "typedoc",
     "release": "standard-version",
-    "postrelease": "git push --follow-tags origin main",
+    "postrelease": "git push --follow-tags origin HEAD",
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
